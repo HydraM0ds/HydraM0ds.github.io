@@ -25,6 +25,12 @@
         body.light .border-slate-700 { border-color: #94a3b8 !important; }
         body.light .border-sky-500\/20 { border-color: rgba(56,189,248,0.2) !important; }
         body.light .bg-sky-500\/5 { background-color: rgba(56,189,248,0.05) !important; }
+        /* Modal styles for blog post summaries */
+        .modal-overlay { position: fixed; inset: 0; background: rgba(2,6,23,0.6); display: flex; align-items: center; justify-content: center; z-index: 60; }
+        .modal-hidden { display: none; }
+        .modal-box { background: #0b1220; color: #cbd5e1; border-radius: 0.5rem; padding: 1.25rem; max-width: 40rem; width: calc(100% - 2rem); box-shadow: 0 10px 30px rgba(2,6,23,0.6); }
+        .modal-close { background: transparent; border: 1px solid rgba(148,163,184,0.08); color: #94a3b8; padding: 0.25rem 0.5rem; border-radius: 0.375rem; cursor: pointer; }
+        .cursor-pointer { cursor: pointer; }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-300 leading-relaxed">
@@ -131,37 +137,37 @@
             <span class="text-sky-500 mr-2">02.</span> Blog / Activity Log
         </h2>
         <div class="space-y-8">
-            <article class="border-l-2 border-slate-700 pl-6 hover:border-sky-500 transition">
-                <span class="text-xs text-slate-500 uppercase tracking-widest">May 26, 2026 • Blog</span>
-                <h3 class="text-xl font-semibold text-white">Proxmox VE — Open-Source Virtualisation for the Real World</h3>
-                <p class="text-slate-400 mt-2">A look at how Proxmox VE enables real-world virtual infrastructure with open-source flexibility.</p>
-            </article>
-
-            <article class="border-l-2 border-slate-700 pl-6 hover:border-sky-500 transition">
-                <span class="text-xs text-slate-500 uppercase tracking-widest">April 28, 2026 • Blog</span>
-                <h3 class="text-xl font-semibold text-white">The 5 levels of Infrastructure as Code</h3>
-                <p class="text-slate-400 mt-2">Exploring the progression from simple scripting to fully automated infrastructure pipelines.</p>
-            </article>
-
-            <article class="border-l-2 border-slate-700 pl-6 hover:border-sky-500 transition">
-                <span class="text-xs text-slate-500 uppercase tracking-widest">March 10, 2026 • Vibe Coding Hackathon</span>
-                <h3 class="text-xl font-semibold text-white">Vibe Coding Hackathon</h3>
-                <p class="text-slate-400 mt-2">Highlights from the Vibe Coding Hackathon and the security-focused challenges tackled in one day.</p>
-            </article>
-
-            <article class="border-l-2 border-slate-700 pl-6 hover:border-sky-500 transition">
-                <span class="text-xs text-slate-500 uppercase tracking-widest">February 24, 2026 • Blog</span>
-                <h3 class="text-xl font-semibold text-white">Insights into Cyber Defense: A Day in the Life of Blue &amp; Purple Team Engineers</h3>
-                <p class="text-slate-400 mt-2">An inside view of how blue and purple teams collaborate to defend and improve enterprise security.</p>
-            </article>
-
-            <article class="border-l-2 border-slate-700 pl-6 hover:border-sky-500 transition">
+            <article class="border-l-2 border-slate-700 pl-6 hover:border-sky-500 transition" data-summary="From philosophy to practice: translating security theory into hands-on exercises during community events and hack days.">
                 <span class="text-xs text-slate-500 uppercase tracking-widest">February 17, 2026 • Blog</span>
                 <h3 class="text-xl font-semibold text-white">Van Plato tot Vibe Coding</h3>
                 <p class="text-slate-400 mt-2">From philosophy to practical code: how modern security practices evolved from concept to hackathon.</p>
             </article>
 
-            <article class="border-l-2 border-slate-700 pl-6 hover:border-sky-500 transition">
+            <article class="border-l-2 border-slate-700 pl-6 hover:border-sky-500 transition" data-summary="Spent a day shadowing blue and purple teams; learned incident response playbooks, detection tuning and cross-team communication for remediation.">
+                <span class="text-xs text-slate-500 uppercase tracking-widest">February 24, 2026 • Blog</span>
+                <h3 class="text-xl font-semibold text-white">Insights into Cyber Defense: A Day in the Life of Blue &amp; Purple Team Engineers</h3>
+                <p class="text-slate-400 mt-2">An inside view of how blue and purple teams collaborate to defend and improve enterprise security.</p>
+            </article>
+
+            <article class="border-l-2 border-slate-700 pl-6 hover:border-sky-500 transition" data-summary="Vibe Coding Hackathon: intensive 24-hour collaboration focusing on security challenges; learned rapid prototyping, clear communication and secure-by-design tradeoffs.">
+                <span class="text-xs text-slate-500 uppercase tracking-widest">March 10, 2026 • Vibe Coding Hackathon</span>
+                <h3 class="text-xl font-semibold text-white">Vibe Coding Hackathon</h3>
+                <p class="text-slate-400 mt-2">Highlights from the Vibe Coding Hackathon and the security-focused challenges tackled in one day.</p>
+            </article>
+
+            <article class="border-l-2 border-slate-700 pl-6 hover:border-sky-500 transition" data-summary="Compared IaC patterns across tools like Terraform and Ansible; learned modular design, idempotency, and safer deployment pipelines.">
+                <span class="text-xs text-slate-500 uppercase tracking-widest">April 28, 2026 • Blog</span>
+                <h3 class="text-xl font-semibold text-white">The 5 levels of Infrastructure as Code</h3>
+                <p class="text-slate-400 mt-2">Exploring the progression from simple scripting to fully automated infrastructure pipelines.</p>
+            </article>
+
+            <article class="border-l-2 border-slate-700 pl-6 hover:border-sky-500 transition" data-summary="Deployed and managed Proxmox VE clusters with KVM and LXC; learned storage options, backup strategies and VM/container trade-offs.">
+                <span class="text-xs text-slate-500 uppercase tracking-widest">May 26, 2026 • Blog</span>
+                <h3 class="text-xl font-semibold text-white">Proxmox VE — Open-Source Virtualisation for the Real World</h3>
+                <p class="text-slate-400 mt-2">A look at how Proxmox VE enables real-world virtual infrastructure with open-source flexibility.</p>
+            </article>
+
+            <article class="border-l-2 border-slate-700 pl-6 hover:border-sky-500 transition" data-summary="Episode pending: will discuss recent projects, lessons learned in pentesting, and advice for students entering cybersecurity.">
                 <span class="text-xs text-slate-500 uppercase tracking-widest">Coming Soon</span>
                 <h3 class="text-xl font-semibold text-white">Podcast Episode Coming Soon</h3>
                 <p class="text-slate-400 mt-2">A new episode is pending recording — stay tuned for the next cybersecurity podcast installment.</p>
@@ -205,6 +211,52 @@
     <footer class="py-12 text-center text-slate-600 text-xs border-t border-slate-900">
         <p>© 2026 Sebastiaan Vermeulen. Built with code & caffeine.</p>
     </footer>
+
+    <!-- Modal for blog post summaries -->
+    <div id="postModal" class="modal-overlay modal-hidden" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-box">
+            <div class="flex justify-between items-start">
+                <h3 id="modalTitle" class="text-xl font-bold text-white"></h3>
+                <button id="modalClose" class="modal-close">Close</button>
+            </div>
+            <p id="modalBody" class="mt-4 text-slate-300"></p>
+        </div>
+    </div>
+
+    <script>
+        // Blog post modal behavior
+        (function(){
+            const postModal = document.getElementById('postModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalBody = document.getElementById('modalBody');
+            const modalClose = document.getElementById('modalClose');
+
+            function openModal(title, body){
+                modalTitle.textContent = title;
+                modalBody.textContent = body;
+                postModal.classList.remove('modal-hidden');
+                postModal.setAttribute('aria-hidden','false');
+            }
+
+            function closeModal(){
+                postModal.classList.add('modal-hidden');
+                postModal.setAttribute('aria-hidden','true');
+            }
+
+            document.querySelectorAll('#blog article').forEach(article => {
+                article.classList.add('cursor-pointer');
+                article.addEventListener('click', () => {
+                    const title = article.querySelector('h3')?.textContent || 'Post';
+                    const summary = article.dataset.summary || article.querySelector('p')?.textContent || '';
+                    openModal(title, summary);
+                });
+            });
+
+            modalClose.addEventListener('click', closeModal);
+            postModal.addEventListener('click', (e) => { if(e.target === postModal) closeModal(); });
+            document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
+        })();
+    </script>
 
     <script>
         const themeToggle = document.getElementById('themeToggle');
