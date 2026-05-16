@@ -256,7 +256,7 @@
 
             function openModal(title, body){
                 modalTitle.textContent = title;
-                modalBody.textContent = body;
+                modalBody.innerHTML = body;
                 postModal.classList.remove('modal-hidden');
                 postModal.setAttribute('aria-hidden','false');
             }
