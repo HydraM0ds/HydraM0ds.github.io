@@ -42,9 +42,9 @@
             <span class="text-sky-500 font-bold tracking-tighter">SV_root@howest:~$</span>
             <div class="flex items-center gap-4">
                 <div class="space-x-6 text-sm uppercase tracking-widest hidden md:flex">
-                    <a href="#about" class="hover:text-sky-400 transition">About</a>
                     <a href="#projects" class="hover:text-sky-400 transition">Projects</a>
                     <a href="#blog" class="hover:text-sky-400 transition">Blog</a>
+                    <a href="#about" class="hover:text-sky-400 transition">About</a>
                 </div>
                 <button id="themeToggle" class="rounded-full border border-slate-700 px-3 py-1 text-xs uppercase tracking-widest hover:border-sky-500 transition" aria-label="Toggle light and dark mode">Light Mode</button>
             </div>
@@ -142,6 +142,7 @@
                 <span class="text-xs text-slate-500 uppercase tracking-widest">February 17, 2026 • Blog</span>
                 <h3 class="text-xl font-semibold text-white">Van Plato tot Vibe Coding</h3>
                 <p class="text-slate-400 mt-2">A thoughtful session that reframed programming as the formalization of thought. It connected Plato's questions about logic and representation to today’s machines, infrastructure and AI.</p>
+                <div class="flex gap-2 text-xs font-mono text-slate-500 mt-3"><span>#Philosophy</span><span>#AI</span></div>
                 <div class="post-hidden">
                     <p class="text-slate-300 mt-2">What I learned: programming did not begin with computers; it began with making thinking explicit. Clear structure, abstraction and precise expression are still the same foundations behind prompt engineering, AI and modern development.</p>
                     <p class="text-slate-300 mt-2">Additional notes: The session showed that the core challenge has always been the same: translate human intent into a form a machine can work with. That context makes it easier to make better technical choices in a rapidly evolving landscape.</p>
@@ -153,6 +154,7 @@
                 <span class="text-xs text-slate-500 uppercase tracking-widest">February 24, 2026 • Blog</span>
                 <h3 class="text-xl font-semibold text-white">Insights into Cyber Defense: A Day in the Life of Blue &amp; Purple Team Engineers</h3>
                 <p class="text-slate-400 mt-2">A behind-the-scenes session on how Blue and Purple Teams work together to detect and respond to threats, including a realistic ransomware incident walkthrough with EDR/XDR tooling.</p>
+                <div class="flex gap-2 text-xs font-mono text-slate-500 mt-3"><span>#BlueTeam</span><span>#PurpleTeam</span></div>
                 <div class="post-hidden">
                     <p class="text-slate-300 mt-2">What I learned: seeing the roles and tools of Blue and Purple Team engineers in action made the process much clearer. It’s one thing to read about detection, and another to watch incident investigation, response coordination, and mitigation steps happen live.</p>
                     <p class="text-slate-300 mt-2">Additional notes: The ransomware walkthrough was particularly powerful — it showed how security teams use EDR/XDR telemetry to trace attacker behavior and contain threats before they spread.</p>
@@ -164,6 +166,7 @@
                 <span class="text-xs text-slate-500 uppercase tracking-widest">March 10, 2026 • Vibe Coding Hackathon</span>
                 <h3 class="text-xl font-semibold text-white">Vibe Coding Hackathon</h3>
                 <p class="text-slate-400 mt-2">An inspiring first hackathon at Howest that showed how AI-driven development can turn ideas into working software in a single day.</p>
+                <div class="flex gap-2 text-xs font-mono text-slate-500 mt-3"><span>#AIforDev</span><span>#Hackathon</span></div>
                 <div class="post-hidden">
                     <p class="text-slate-300 mt-2">What I learned: instead of writing long blocks of code, we guided Lovable with natural language to generate interfaces, logic and flows. This shifted our focus to idea, structure and teamwork while the AI handled much of the implementation.</p>
                     <p class="text-slate-300 mt-2">Additional notes: the event was organized by Gene Vangampelaere and sponsored by Lovable, and it had a surprisingly energetic, collaborative atmosphere. Moving from ideation to demo without slides highlighted how fast software can be built with the right tools.</p>
@@ -175,6 +178,7 @@
                 <span class="text-xs text-slate-500 uppercase tracking-widest">April 28, 2026 • Blog</span>
                 <h3 class="text-xl font-semibold text-white">The 5 levels of Infrastructure as Code</h3>
                 <p class="text-slate-400 mt-2">A hands-on session with Tim Van Roosbroeck and Dimitry Decan about IaC maturity in Azure, from ClickOps through scripting to modular, governed deployments.</p>
+                <div class="flex gap-2 text-xs font-mono text-slate-500 mt-3"><span>#IaC</span><span>#Azure</span></div>
                 <div class="post-hidden">
                     <p class="text-slate-300 mt-2">What I learned: cloud infrastructure maturity moves from manual portal work to scripted automation, declarative IaC, reusable modules, and finally fully governed pipelines. Each step reduces risk and improves consistency while preparing environments for scale.</p>
                     <p class="text-slate-300 mt-2">Additional notes: Level 1 (ClickOps) is a starting point, but it quickly becomes inconsistent. Level 2 scripting helps speed up work but scales poorly, while Level 3 declarative IaC with tools like Azure Bicep and Terraform brings clarity by describing desired state instead of steps.</p>
@@ -185,6 +189,7 @@
             <article class="border-l-2 border-slate-700 pl-6 hover:border-sky-500 transition" data-summary="Deployed Proxmox clusters with KVM and LXC, explored storage backends (ZFS), backup/restore strategies, fencing and network config; learned trade-offs for performance, flexibility and maintenance.">
                 <span class="text-xs text-slate-500 uppercase tracking-widest">May 26, 2026 • Blog</span>
                 <h3 class="text-xl font-semibold text-white">Proxmox VE — Open-Source Virtualisation for the Real World</h3>
+                <div class="flex gap-2 text-xs font-mono text-slate-500 mt-3"><span>#Proxmox</span><span>#Virtualization</span></div>
                 <div class="post-hidden">
                     <p class="text-slate-400 mt-2">A look at how Proxmox VE enables real-world virtual infrastructure with open-source flexibility.</p>
                     <p class="text-slate-300 mt-2">What I learned: Hands-on work with Proxmox exposed the pros and cons of KVM vs LXC, how ZFS simplifies snapshots and backups, and why clustering and fencing matter for resilience. I also improved my approach to networking for isolation and learned operational practices for backups, restores, and safe upgrades.</p>
@@ -195,6 +200,7 @@
             <article class="border-l-2 border-slate-700 pl-6 hover:border-sky-500 transition" data-summary="Episode pending: will discuss recent projects, lessons learned in pentesting, and advice for students entering cybersecurity.">
                 <span class="text-xs text-slate-500 uppercase tracking-widest">Coming Soon</span>
                 <h3 class="text-xl font-semibold text-white">Podcast Episode Coming Soon</h3>
+                <div class="flex gap-2 text-xs font-mono text-slate-500 mt-3"><span>#Podcast</span><span>#CyberSec</span></div>
                 <div class="post-hidden">
                     <p class="text-slate-400 mt-2">A new episode is pending recording — stay tuned for the next cybersecurity podcast installment.</p>
                 </div>
